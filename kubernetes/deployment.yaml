@@ -20,6 +20,8 @@ spec:
       labels:
         app: ecsdemo-nodejs
     spec:
+      nodeSelector:
+        eks.amazonaws.com/nodegroup: web-server
       containers:
       - image: brentley/ecsdemo-nodejs:latest
         imagePullPolicy: Always
@@ -27,5 +29,3 @@ spec:
         ports:
         - containerPort: 3000
           protocol: TCP
-    nodeSelector:
-      eks.amazonaws.com/nodegroup: web-server

@@ -27,5 +27,5 @@ spec:
         ports:
         - containerPort: 3000
           protocol: TCP
-  nodeSelector:
-    eks.amazonaws.com/nodegroup: web-server
+    nodeSelector:
+      eks.amazonaws.com/nodegroup: web-server

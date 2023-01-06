@@ -6,8 +6,6 @@ metadata:
     app: ecsdemo-nodejs
   namespace: default
 spec:
-  nodeSelector:
-    eks.amazonaws.com/nodegroup: web-server
   replicas: 2
   selector:
     matchLabels:
@@ -29,3 +27,5 @@ spec:
         ports:
         - containerPort: 3000
           protocol: TCP
+  nodeSelector:
+    eks.amazonaws.com/nodegroup: web-server
